@@ -70,7 +70,7 @@ pip install -r requirements.txt
 ```
 ### 4. 配置环境变量
 
-您需要一个地方存放API密钥等敏感信息。更改.env文件即可
+您需要一个地方存放API密钥等敏感信息，即创建一个`.env`文件。
 
 ```bash
 # .env示例文件
