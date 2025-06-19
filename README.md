@@ -6,6 +6,9 @@
 ![Project Banner](https://placehold.co/1200x400/000000/FFFFFF/png?text=LLM-Dev-Cookbook)
 
 这是一个帮助开发者快速入门LLM应用开发的学习笔记集合。
+
+[🛄教程汇总](https://github.com/tataCrayon/LLM-DEV-COOKBOOK/blob/main/doc/Github%E9%A1%B9%E7%9B%AE%E4%B8%8E%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB.md)
+
 ---
 
 ## 🚀 项目特色
@@ -22,7 +25,9 @@
 ```txt
 ├── .vscode/ # VSCode 编辑器配置
 ├── data/ # 存放原始数据文件 (如 .pdf, .txt)
-├── doc/ # 存放学习资料、设计文档、参考链接等
+│
+├── doc/ # 存放学习资料、设计文档、参考链接等 !!!CORE!!!
+│
 ├── fast_langchain_example/ # 核心: 一个完整的、模块化的LLM应用示例
 │ ├── chains/ # 业务逻辑链的具体实现
 │ ├── core/ # 应用核心组件 (加载器、切分器、嵌入等)
