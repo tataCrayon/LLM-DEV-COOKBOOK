@@ -1,0 +1,7 @@
+# 忽略.env .vscode
+.env
+.vscode
+
+# 忽略测试db
+.my_rag_db
+.my_chroma_data
