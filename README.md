@@ -81,6 +81,7 @@ SERPAPI_API_KEY="xxx"
 ## 📖 如何使用 (学习路径建议)
 
 建议您按照以下顺序来探索这个项目：
+
 Python基础 (fast_python_example): 如果您对Python的一些高级特性不太熟悉，可以先从这里开始，巩固基础。
 
 RAG组件 (fast_rag_example): 这是项目的核心亮点。您可以逐个运行此目录下的example_*.py文件，以理解RAG（检索增强生成）的每个关键部分是如何工作的。
