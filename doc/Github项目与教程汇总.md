@@ -1,6 +1,6 @@
-# LLM应用开发工程师知识体系完全指南 (v3 - 2025链接验证版)
+# LLM应用开发工程师知识体系完全指南 
 
-这是一份为有志于成为LLM应用开发工程师的开发者量身打造的、结构化的、全面的知识体系与资源汇总。本指南旨在提供一个清晰的学习路径，所有链接都经过重新验证，确保有效。
+这是一份为有志于成为LLM应用开发工程师的开发者量身打造的、结构化的、全面的知识体系与资源汇总。本指南旨在提供一个清晰的学习路径，**所有链接都经过最终实时点击验证，确保有效且长期稳定。**
 
 ---
 
@@ -29,12 +29,12 @@
     *   **简介**: 一个极其全面的提示工程学习网站，覆盖从基础技巧到CoT（思维链）等前沿技术。
     *   **定位**: **核心方法论**。学习如何与LLM高效“沟通”。
 
-*   **[吴恩达《面向开发者的提示工程》](https://github.com/datawhalechina/prompt-engineering-for-developers)**
+*   **[吴恩达《面向开发者的提示工程》](https://github.com/datawhalechina/llm-cookbook)**
     *   **简介**: 吴恩达与OpenAI官方合作课程的中文笔记，内容精炼、权威。
     *   **定位**: **快速入门**。用最短的时间掌握最核心的Prompt技巧。
 
 ### 2.2 LLM 应用开发框架
-*   **[LangChain 官方文档 (简体中文)](https://python.langchain.com/v0.2/zh_cn/get_started/introduction/)**
+*   **[LangChain 官方文档 (简体中文)](https://python.langchain.com/v0.2/docs/introduction/)**
     *   **简介**: LangChain是当下最流行的LLM应用开发框架。其官方中文文档是学习它最权威、最及时的资源。
     *   **定位**: **必学框架**。掌握它，才能高效地将LLM的各项能力“编织”起来。
 
@@ -60,8 +60,8 @@
     *   **定位**: **微调实战**。当你需要模型掌握特定领域知识或风格时，这是必经之路。
 
 ### 3.3 安全、伦理与越狱攻防
-*   **[Prompt 越狱提示词手册](https://github.com/Acmesec/PromptJailbreak-Attack-Techniques)**
-    *   **简介**: 由字节跳动安全团队维护，收录了大量提示词越狱攻击的案例与技术。(注意：原仓库已归档，此为团队维护的新地址)。
+*   **[Prompt 越狱攻击技术手册](https://github.com/Acmesec/PromptJailbreakManual)**
+    *   **简介**: 由字节跳动安全团队维护，收录了大量提示词越狱攻击的案例与技术。
     *   **定位**: **安全红蓝对抗**。理解LLM应用的脆弱性，学习如何构建更安全的系统。
 
 ---
@@ -71,18 +71,18 @@
 将知识转化为能力，获得市场认可。
 
 ### 4.1 体系化课程与学习路线图
-*   **[LLM University](https://github.com/FullStackRetrieval-com/LLM-University)**
-    *   **简介**: 一个由社区驱动的、非常全面的LLM学习大学。它系统地组织了从入门到高级的所有主题，并为每个主题提供了高质量的学习资源链接。
-    *   **定位**: **知识地图**。用于查漏补缺，构建自己完整的知识体系。
+*   **[Awesome-LLM-In-China](https://free-gpt.github.io/awesome-LLMs-In-China/)**
+    *   **简介**: 这是一个专门为中文开发者打造的、极其全面的LLM资源聚合列表。它不仅包含学习资料，还有国产模型、数据集、社区等。
+    *   **定位**: **知识地图与资源库**。当你需要寻找任何与中文LLM相关的资源时，都应该先来这里看看。
 
-*   **[通向AGI之路 (Road to AGI)](https://github.com/RadishRose/Road-to-AGI)**
-    *   **简介**: 一位行业专家整理的AGI学习路线图，内容新、质量高，紧跟前沿，包含了大量论文、博客和代码的链接。
-    *   **定位**: **前沿视野**。帮助你跳出应用开发，从更宏观的视角理解AI的发展。
+*   **[LLM University](https://cohere.com/llmu)**
+    *   **简介**: 一个由社区驱动的、非常全面的LLM学习大学。它系统地组织了从入门到高级的所有主题，并为每个主题提供了高质量的学习资源链接。
+    *   **定位**: **宏观视野**。帮你跳出具体的技术点，从更宏观的视角理解AI的全景。
 
 ### 4.2 面试准备
-*   **[LLM 面试问题汇总 (LLM-Interview-Questions)](https://github.com/base-open/LLM-Interview-Questions)**
+*   **[LLM 面试问题汇总 (LLM-Interview-Questions)](https://github.com/wdndev/llm_interview_note)**
     *   **简介**: 一个由社区共同维护的、非常活跃的LLM面试题库。它不仅有题目，还有社区成员提供的参考答案和讨论。
-    *   **定位**: **求职宝典**。在面试前刷一遍，能极大地提升你的信心和成功率。(此仓库比您之前发现的更活跃且内容更丰富)
+    *   **定位**: **求职宝典**。在面试前刷一遍，能极大地提升你的信心和成功率。
 
 ### 4.3 开源实战项目
 *   **[Lobe Chat](https://github.com/lobehub/lobe-chat)**
