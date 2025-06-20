@@ -29,7 +29,7 @@
 │
 ├── doc/ # 存放学习资料、设计文档、参考链接等 !!!CORE!!!
 │
-├── fast_langchain_example/ # 核心: 一个完整的、模块化的LLM应用示例
+├── fast_langchain_example/ 
 │ ├── chains/ # 业务逻辑链的具体实现
 │ ├── core/ # 应用核心组件 (加载器、切分器、嵌入等)
 │ └── prompt/ # 提示词模板管理
@@ -46,6 +46,17 @@
 ├── .gitignore # Git忽略文件配置
 └── README.md
 ```
+
+- fast_langchain_example  
+相较官网示例，本项目example组件联系更密接，有关联承接。  
+deepseek_chat.py:使用LangChain构建DeepSeek+联网搜索的Agent。  
+其他：LangChain各组件example  
+
+- fast_python_example  
+LLM开发相关的Python基础知识示例  
+
+- fast_rag_example  
+RAG各组件的独立、可运行示例
 ---
 
 ## ⚙️ 如何开始
@@ -88,7 +99,7 @@ SERPAPI_API_KEY="xxx"
 
 建议您按照以下顺序来探索这个项目：
 
-Python基础 (fast_python_example): 如果您对Python的一些高级特性不太熟悉，可以先从这里开始，巩固基础。
+Python基础 (fast_python_example): 学习LLM应用开发必须了解的Python知识。
 
 RAG组件 (fast_rag_example): 这是项目的核心亮点。您可以逐个运行此目录下的example_*.py文件，以理解RAG（检索增强生成）的每个关键部分是如何工作的。
 
@@ -97,6 +108,7 @@ RAG组件 (fast_rag_example): 这是项目的核心亮点。您可以逐个运�
 文档 (doc): 此目录存放了为您整理的LLM相关的学习资料，可以作为您深入学习的参考。
 
 # ✨学习方法总结
+
 - **公开学习，输出倒逼输入。**
 - **借鉴别人的学习路线与笔记，结合书籍，多看优秀的Github项目。**
 - **将自己学习、整理的思路形成Prompt，以让大模型辅助回答整理格式。**
