@@ -22,6 +22,24 @@
 
 可以分阶段学习，先了解python基础语法、数据科学库（Numpy和Pandas），在学RAG和Agent知识时边练习边补充。
 
+
+### 深入学习资料  
+
+*   **[NLP 精通指南：从零到英雄使用](https://codanics.com/nlp_huggingface_guide/)**
+    *   **简介**: 自然语言处理（NLP）是人类语言与计算机理解之间的桥梁。无论您是想构建聊天机器人、分析情感、翻译语言，还是创造 AI 的下一个突破，这本全面的指南都将带您从绝对初学者成长为高级从业者。
+
+*   **[Hugging Face 101：绝对初学者的教程！](https://dev.to/pavanbelagatti/hugging-face-101-a-tutorial-for-absolute-beginners-3b0l)**
+
+
+*   **[TensorFlow官网教程](https://www.tensorflow.org/learn?hl=zh-cn)**
+    *   **简介**: 借助 TensorFlow，初学者和专家可以轻松创建适用于桌面、移动、Web 和云环境的机器学习模型。
+
+
+*   **[PyTorch官网文档](https://docs.pytorch.org/docs/stable/index.html)**
+    *   **简介**: PyTorch 是一个用于深度学习的优化张量库，支持 GPU 和 CPU。
+    *   **项目**: [LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch)。一个在 PyTorch 中从零开始实现类似 ChatGPT 的 LLM 的项目。
+
+
 ---
 
 ## 2️⃣LLM基础  
@@ -38,9 +56,9 @@
 旨在作为一个大规模预训练语言模型的教程，从数据准备、模型构建、训练策略到模型评估与改进，以及模型在安全、隐私、环境和法律道德方面的方面来提供开源知识。
 
 
-### 扩展学习
+### 深入学习
 
-在完成LLM应用开发学习后可以进行的扩展。
+在初步完成LLM应用开发学习后，进行LLM基础深入学习。
 
 *   **[《动手学深度学习》](https://github.com/d2l-ai/d2l-zh)**
     *   **简介**: 由亚马逊科学家团队撰写的权威入门教程，提供从零开始的深度学习理论和代码实践。是理解后续一切模型的基础。
@@ -48,6 +66,7 @@
 
 *   **[Hugging Face NLP 课程 (中文版)](https://huggingface.co/learn/nlp-course/zh-CN/chapter1/1)**
     *   **简介**: Hugging Face官方教程，带你学习如何使用 Transformers 库解决NLP问题，是连接理论与实践的最佳桥梁。
+
 
 
 ---
@@ -83,7 +102,7 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 
 大佬“沧海九粟”的中文版：[从零开始学习 RAG](https://www.bilibili.com/video/BV1dm41127jc/)
 
-### 其它  
+### 深入学习  
 
 - GraphRAG  
 微软研究院的GraphRAG介绍：[《Welcome to GraphRAG》](https://microsoft.github.io/graphrag/)
