@@ -7,7 +7,7 @@
 
 1️⃣这是一个帮助开发者快速入门**LLM应用开发**的学习笔记集合。  
 2️⃣有学习路线可供参考，以及收集汇总了一些资料（持续更新）。  
-3️⃣提供了可以快速入门，可以run的demo——使用Python编写的RAG、Agent与LangChain demo。
+3️⃣提供了可快速入门且能运行的 demo——使用Python编写的RAG、Agent与LangChain demo。
 
 
 [🛄教程汇总](https://github.com/tataCrayon/LLM-DEV-COOKBOOK/blob/main/doc/Github%E9%A1%B9%E7%9B%AE%E4%B8%8E%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB.md)
