@@ -51,6 +51,8 @@ LLM应用开发学习路线参考如下：
 │ ├── example_embedding_zh.py
 │ └── ...
 │
+├── prompt_library # prompt库
+│
 ├── scripts/ # 存放独立的工具脚本 (如数据下载、预处理)
 ├── tests/ # 自动化测试用例
 ├── .env # 环境变量示例文件 (请复制为.env并填入您的密钥)
@@ -67,7 +69,11 @@ deepseek_chat.py:使用LangChain构建DeepSeek+联网搜索的Agent。
 LLM开发相关的Python基础知识示例  
 
 - fast_rag_example  
-RAG各组件的独立、可运行示例
+RAG各组件的独立、可运行示例  
+
+- prompt_library  
+prompt库
+
 ---
 
 # ⚙️ 如何开始
