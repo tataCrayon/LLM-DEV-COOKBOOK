@@ -10,7 +10,7 @@
 3️⃣提供了可快速入门且能运行的 demo——使用Python编写的RAG、Agent与LangChain demo。
 
 
-[🛄教程汇总](https://github.com/tataCrayon/LLM-DEV-COOKBOOK/blob/main/doc/Github%E9%A1%B9%E7%9B%AE%E4%B8%8E%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB.md)
+🌠🌠🌠[🛄教程汇总](doc/教程汇总.md)🌠🌠🌠
 
 # 😺学习路线  
 
