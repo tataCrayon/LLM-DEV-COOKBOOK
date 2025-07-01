@@ -10,7 +10,7 @@
 3️⃣提供了可快速入门且能运行的 demo——使用Python编写的RAG、Agent与LangChain demo。
 
 
-🌠🌠🌠[🛄教程汇总](doc/教程汇总.md)🌠🌠🌠
+🌠🌠🌠[🛄LLM应用开发教程汇总](doc/LLM应用开发教程汇总.md)🌠🌠🌠
 
 # 😺学习路线  
 
