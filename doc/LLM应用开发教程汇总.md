@@ -10,23 +10,49 @@
 主要了解Python基础语法，常见库类。  
 
 ### 基础语法  
+
+- [Python3官方教程（英文）](https://docs.python.org/3/tutorial/)
+- [Python3官方教程（中文）](https://docs.python.org/zh-cn/3/tutorial/)
 - [菜鸟教程](https://www.runoob.com/python/python-tutorial.html)：基础教程。
 - [codeDex](https://www.codedex.io/python)：趣味学Python的网站。
+
 
 ### 常见库类  
 
 熟悉用于生成式AI的关键Python库包括TensorFlow、PyTorch、Hugging Face Transformers、Diffusers、Jax、LangChain、LlamaIndex和Weight and Biases 。还有数据科学库Numpy和Pandas。
 这些库通过提供预编写的代码模块和优化的算法，极大地简化了复杂的编程任务，从而加快了开发速度并减少了错误 。
 
+-  **数据科学与 AI 核心库**
+    - NumPy: 数值计算, 数组操作
+        - 官方文档: [https://numpy.org/doc/stable/user/index.html](https://numpy.org/doc/stable/user/index.html)
+        - 中文文档: [https://www.numpy.org.cn/user/index.html](https://www.numpy.org.cn/user/index.html)
+        - 菜鸟教程: [https://www.runoob.com/numpy/numpy-tutorial.html](https://www.runoob.com/numpy/numpy-tutorial.html)
+    - Pandas: 数据分析与处理, DataFrame
+        - 官方文档: [https://pandas.pydata.org/docs/user_guide/index.html](https://pandas.pydata.org/docs/user_guide/index.html)
+        - 中文文档 (社区): [https://www.pypandas.cn/docs/](https://www.pypandas.cn/docs/)
+        - 10 Minutes to pandas: [https://pandas.pydata.org/docs/user_guide/10min.html](https://pandas.pydata.org/docs/user_guide/10min.html)
+    - Matplotlib & Seaborn: 数据可视化
+        - Matplotlib 官方教程: [https://matplotlib.org/stable/tutorials/index.html](https://matplotlib.org/stable/tutorials/index.html)
+        - Seaborn 官方教程: [https://seaborn.pydata.org/tutorial.html](https://seaborn.pydata.org/tutorial.html)
+        - Matplotlib 中文文档: [https://www.matplotlib.org.cn/tutorials/](https://www.matplotlib.org.cn/tutorials/)
+    - Scikit-learn: 核心机器学习库 (分类, 回归, 聚类, 模型评估, 预处理)
+        - 官方文档: [https://scikit-learn.org/stable/user_guide.html](https://scikit-learn.org/stable/user_guide.html)
+        - 中文文档 (社区): [https://scikit-learn.org.cn/view/6.html](https://scikit-learn.org.cn/view/6.html)
+
 ### 建议  
 
-可以分阶段学习，先了解python基础语法、数据科学库（Numpy和Pandas），在学RAG和Agent知识时边练习边补充。
+可以分阶段学习，先了解python基础语法、数据科学库（Numpy和Pandas）基本用法，在学RAG和Agent知识时边练习边补充。
 
 
 ### 深入学习资料  
 
+*   **[FastAPI官方文档](https://fastapi.tiangolo.com/)**
+    *   **简介**: FastAPI 是一个现代、快速（高性能）的 Web 框架，用于使用 Python 构建 API，基于标准 Python 类型提示。
+
+
 *   **[NLP 精通指南：从零到英雄使用](https://codanics.com/nlp_huggingface_guide/)**
     *   **简介**: 自然语言处理（NLP）是人类语言与计算机理解之间的桥梁。无论您是想构建聊天机器人、分析情感、翻译语言，还是创造 AI 的下一个突破，这本全面的指南都将带您从绝对初学者成长为高级从业者。
+
 
 *   **[Hugging Face 101：绝对初学者的教程！](https://dev.to/pavanbelagatti/hugging-face-101-a-tutorial-for-absolute-beginners-3b0l)**
 
@@ -63,11 +89,11 @@
 *   **[《动手学深度学习》](https://github.com/d2l-ai/d2l-zh)**
     *   **简介**: 由亚马逊科学家团队撰写的权威入门教程，提供从零开始的深度学习理论和代码实践。是理解后续一切模型的基础。
 
+*   **[Deep Learning Book (Chapter 6-8)](https://www.deeplearningbook.org/)**
+    *   **简介**: 第六、七、八章主要涵盖了深度前馈网络的基础知识、训练中的常见问题及其解决方案，以及优化算法。
 
 *   **[Hugging Face NLP 课程 (中文版)](https://huggingface.co/learn/nlp-course/zh-CN/chapter1/1)**
     *   **简介**: Hugging Face官方教程，带你学习如何使用 Transformers 库解决NLP问题，是连接理论与实践的最佳桥梁。
-
-
 
 ---
 
@@ -172,12 +198,10 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
     *   **定位**: **求职宝典**。在面试前刷一遍，能极大地提升你的信心和成功率。
 
 
-
 ---
 
 
 ## 9️⃣其它优秀教程
-
 
 
 *   **[LLM 知识汇总(LLMForEverybody)](https://github.com/luhengshiwo/LLMForEverybody)**
