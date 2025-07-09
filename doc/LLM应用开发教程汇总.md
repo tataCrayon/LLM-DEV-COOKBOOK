@@ -15,6 +15,7 @@
 - [Python3官方教程（中文）](https://docs.python.org/zh-cn/3/tutorial/)
 - [菜鸟教程](https://www.runoob.com/python/python-tutorial.html)：基础教程。
 - [codeDex](https://www.codedex.io/python)：趣味学Python的网站。
+- [realpython](https://realpython.com/):高质量Python教程。
 
 
 ### 常见库类  
