@@ -15,7 +15,7 @@
 - [Python3官方教程（中文）](https://docs.python.org/zh-cn/3/tutorial/)
 - [菜鸟教程](https://www.runoob.com/python/python-tutorial.html)：基础教程。
 - [codeDex](https://www.codedex.io/python)：趣味学Python的网站。
-- [realpython](https://realpython.com/):高质量Python教程。
+- [realpython](https://realpython.com/)：高质量Python教程。
 
 
 ### 常见库类  
@@ -204,6 +204,8 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 
 ## 9️⃣其它优秀教程
 
+*   **[谷歌机器学习教程)](https://developers.google.com/machine-learning?hl=zh-cn)**
+    *   **简介**: 通过 Google 的机器学习课程学习如何构建机器学习产品。
 
 *   **[LLM 知识汇总(LLMForEverybody)](https://github.com/luhengshiwo/LLMForEverybody)**
     *   **简介**: 每个人都能看懂的大模型知识分享，LLMs春/秋招大模型面试前必看，让你和面试官侃侃而谈。
