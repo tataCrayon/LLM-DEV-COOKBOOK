@@ -79,7 +79,7 @@
 作者团队在B站有视频：[浙江大学-大模型原理与技术](https://www.bilibili.com/video/BV1PB6XYFET2)
 
 
-- https://github.com/datawhalechina/so-large-lm  
+- https://github.com/datawhalechina/so-large-lm  （推荐）
 旨在作为一个大规模预训练语言模型的教程，从数据准备、模型构建、训练策略到模型评估与改进，以及模型在安全、隐私、环境和法律道德方面的方面来提供开源知识。
 
 
@@ -144,12 +144,14 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 这一块目前还是东看看西看看，如果有推荐欢迎联系补充。  
 目前看的书《大模型应用开发 动手做AI Agent》。
 
+- Crash Course: Building AI Agents with Open-Source Tools  
+[速成课：使用开源工具构建 AI 代理](https://github.com/patchy631/ai-engineering-hub/tree/main/agent-with-mcp-memory)  
+讲“什么是AI代理”、“将代理连接到工具”、“用MCP服务器替换工具”、设置“可观察性和跟踪”。  
+
 
 ### 扩展学习  
 
 来自anthropic官网的文章[《building-effective-agents》](https://www.anthropic.com/engineering/building-effective-agents)。
-
-
 
 ---
 
