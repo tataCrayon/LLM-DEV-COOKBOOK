@@ -1,16 +1,25 @@
-
-
-
 # LLM-Dev-Cookbook
 
 ![Project Banner](https://placehold.co/1200x400/000000/FFFFFF/png?text=LLM-Dev-Cookbook)
 
-1️⃣这是一个帮助开发者快速入门**LLM应用开发**的学习笔记集合。  
-2️⃣有学习路线可供参考，以及收集汇总了一些资料（持续更新）。  
+1️⃣这是一个帮助开发者快速入门**LLM应用开发**的学习笔记集合。 
+
+2️⃣有学习路线可供参考，以及收集汇总了一些资料（持续更新）。 
+
 3️⃣提供了可快速入门且能运行的 demo——使用Python编写的RAG、Agent与LangChain demo。
 
 
 🌠🌠🌠[🛄LLM应用开发教程汇总](doc/LLM应用开发教程汇总.md)🌠🌠🌠
+
+
+我的其他两个项目，doc/ system design在入门阶段有一定参考价值。  
+- 🌠[llm-for-python-developers](https://github.com/tataCrayon/llm-for-python-developers)🌠   
+智能问答系统(RAG)：基于用户画像的RAG实践。使用FastAPI架构，结构清晰，在doc/system design有设计详情。
+
+
+- 🌠[llm-for-java-developers](https://github.com/tataCrayon/llm-for-java-developers)🌠   
+使用LangChain4j开发的Agent系统。
+
 
 # 😺学习路线  
 
@@ -24,7 +33,9 @@ LLM应用开发学习路线参考如下：
 # 🚀 项目特色
 
 *   **📚 从0~1循序渐进**: 代码示例从Python基础、RAG核心组件到开发框架。
+
 *   **🛠️ 开箱即练**: 所有example均有完善注释，边学边练。
+
 *   **🌱 持续更新**: 目标是入门到进阶，持续更新。
 
 
