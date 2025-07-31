@@ -159,7 +159,6 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 - Lilian Weng博客文章（推荐）：[LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/)
 - [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/):ReAct框架的来源
 - [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172):解释了为什么长上下文处理是个挑战，“为什么要把任务拆分”的理论依据。
-- [Attention Is All You Need](https://arxiv.org/abs/1706.03762):Transformer的开山之作。
 ---
 
 ## 6️⃣框架
@@ -213,7 +212,7 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 
 ## 9️⃣其它优秀教程
 
-*   **[谷歌机器学习教程)](https://developers.google.com/machine-learning?hl=zh-cn)**
+*   **[谷歌机器学习教程](https://developers.google.com/machine-learning?hl=zh-cn)**
     *   **简介**: 通过 Google 的机器学习课程学习如何构建机器学习产品。
 
 *   **[LLM 知识汇总(LLMForEverybody)](https://github.com/luhengshiwo/LLMForEverybody)**
