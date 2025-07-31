@@ -82,6 +82,10 @@
 - https://github.com/datawhalechina/so-large-lm  （推荐）
 旨在作为一个大规模预训练语言模型的教程，从数据准备、模型构建、训练策略到模型评估与改进，以及模型在安全、隐私、环境和法律道德方面的方面来提供开源知识。
 
+### 扩展学习  
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762):Transformer的开山之作。
+
 
 ### 深入学习
 
@@ -151,8 +155,11 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 
 ### 扩展学习  
 
-来自anthropic官网的文章[《building-effective-agents》](https://www.anthropic.com/engineering/building-effective-agents)。
-
+- 来自anthropic官网的文章[《building-effective-agents》](https://www.anthropic.com/engineering/building-effective-agents)。
+- Lilian Weng博客文章（推荐）：[LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/):ReAct框架的来源
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172):解释了为什么长上下文处理是个挑战，“为什么要把任务拆分”的理论依据。
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762):Transformer的开山之作。
 ---
 
 ## 6️⃣框架
