@@ -212,6 +212,9 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 
 ## 9️⃣其它优秀教程
 
+*   **[happy-llm](https://github.com/datawhalechina/happy-llm)**
+    *   **简介**: 📚 从零开始的大语言模型原理与实践教程。深入理解 LLM 核心原理，动手实现你的第一个大模型。
+
 *   **[谷歌机器学习教程](https://developers.google.com/machine-learning?hl=zh-cn)**
     *   **简介**: 通过 Google 的机器学习课程学习如何构建机器学习产品。
 

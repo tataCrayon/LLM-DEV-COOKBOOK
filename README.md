@@ -12,13 +12,20 @@
 🌠🌠🌠[🛄LLM应用开发教程汇总](doc/LLM应用开发教程汇总.md)🌠🌠🌠
 
 
-我的其他两个项目，doc/ system design在入门阶段有一定参考价值。  
+
+
+我的其他RAG、Agent项目，doc/ system design在入门阶段有一定参考价值。  
 - 🌠[llm-for-python-developers](https://github.com/tataCrayon/llm-for-python-developers)🌠   
 智能问答系统(RAG)：基于用户画像的RAG实践。使用FastAPI架构，结构清晰，在doc/system design有设计详情。
 
-
 - 🌠[llm-for-java-developers](https://github.com/tataCrayon/llm-for-java-developers)🌠   
 使用LangChain4j开发的Agent系统。
+
+我的LoRA微调项目：
+- 🌠[easy-tune](https://github.com/tataCrayon/easy-tune)🌠    
+一个基于Qwen2.5-1.5B-Instruct模型的文风迁移微调框架，通过LoRA技术实现个性化写作风格学习。
+
+
 
 
 # 😺学习路线  
