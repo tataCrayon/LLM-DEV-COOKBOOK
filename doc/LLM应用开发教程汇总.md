@@ -145,20 +145,94 @@ LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/p
 
 ## 5️⃣Agent
 
-这一块目前还是东看看西看看，如果有推荐欢迎联系补充。  
-目前看的书《大模型应用开发 动手做AI Agent》。
+Agent 是当前 LLM 应用开发最重要的方向。从单次调用到自治系统，需要掌握的工程知识远超”会调 API”。  
+> 详细的 Agent 系列学习文章见 [doc/agent/](./agent/) 目录。
 
-- Crash Course: Building AI Agents with Open-Source Tools  
-[速成课：使用开源工具构建 AI 代理](https://github.com/patchy631/ai-engineering-hub/tree/main/agent-with-mcp-memory)  
-讲“什么是AI代理”、“将代理连接到工具”、“用MCP服务器替换工具”、设置“可观察性和跟踪”。  
+### 核心必读（按优先级排序）
 
+- **[Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)**（推荐首读）  
+  Anthropic 官方的 Agent 构建指南，讲透了何时用 workflow 何时用 agent、常见架构模式（prompt chaining、routing、orchestrator-worker、evaluator-optimizer）以及”从简单开始”的核心原则。
 
-### 扩展学习  
+- **[Martin Fowler / Böckeler: Harness Engineering for Coding Agent Users](https://martinfowler.com/articles/harness-engineering.html)**  
+  Agent = Model + Harness。系统讲解 Guides/Sensors（前馈/反馈）、三层调控（Maintainability / Architecture / Behaviour）、Computational vs Inferential、Ashby's Law 在 Agent 中的应用。
 
-- 来自anthropic官网的文章[《building-effective-agents》](https://www.anthropic.com/engineering/building-effective-agents)。
-- Lilian Weng博客文章（推荐）：[LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/)
-- [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/):ReAct框架的来源
-- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172):解释了为什么长上下文处理是个挑战，“为什么要把任务拆分”的理论依据。
+- **[OpenAI: Harness Engineering — Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/)**  
+  OpenAI 对 Harness 概念的官方阐释，重点在 Codex 的 Loop 设计。
+
+- **[LangChain: State of Agent Engineering Report](https://www.langchain.com/state-of-agent-engineering)**  
+  2025 年行业调查报告，覆盖 Agent 采用率、部署模式、失败原因、最佳实践。57% 企业已上线 Agent。
+
+- **[Lilian Weng: LLM Powered Autonomous Agents](https://lilianweng.github.io/posts/2023-06-23-agent/)**（推荐）  
+  经典综述，将 Agent 拆解为 Planning + Memory + Tool Use，虽发表于 2023 但思路框架仍然适用。
+
+### Agent 基础范式
+
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://react-lm.github.io/)：ReAct 框架原始论文。
+- [Reflexion: Language Agents with Verbal Reinforcement Learning](https://arxiv.org/abs/2303.11366)：Agent 通过语言反思自我改进。
+- [Tree of Thoughts](https://arxiv.org/abs/2305.10601)：将思维链扩展为思维树，允许搜索与回溯。
+- [Plan-and-Solve Prompting](https://arxiv.org/abs/2305.04091)：先规划后执行的范式。
+
+### Harness Engineering & Loop Engineering
+
+- **[boydfd: 拆解 Harness Engineering 和 Loop Engineering](https://www.cnblogs.com/boydfd/p/20525224)**  
+  五层架构拆解（Cross-cutting → Framework → Design Axes → Pattern → Instance）、10 个 Design Axes、Mechanism vs Policy。国内最深度的中文解读。
+
+- **[puppyone: Loop Engineering — 5 Building Blocks + The Missing One](https://www.puppyone.ai/en/blog/what-is-loop-engineering-5-building-blocks-missing-one)**  
+  Loop 的 5 个构件（Automations、Worktrees、Skills、Connectors、Sub-agents）+ 第 6 块 Workspace（Identity/Scope/Audit/Rollback）。
+
+- **[Data Science Dojo: Agentic Loops Explained — From ReAct to Loop Engineering](https://datasciencedojo.com/blog/agentic-loops-explained-from-react-to-loop-engineering-2026-guide/)**  
+  从 ReAct 到 Loop Engineering 的全景演进指南。
+
+### Multi-Agent 系统
+
+- **[Azure Architecture Center: AI Agent Orchestration Patterns](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns)**  
+  微软官方的 Agent 编排模式参考架构。
+
+- **[LangChain: Choosing the Right Multi-Agent Architecture](https://www.langchain.com/blog/choosing-the-right-multi-agent-architecture)**  
+  Multi-Agent 架构选型指南。
+
+- **[Confluent: Four Design Patterns for Event-Driven Multi-Agent Systems](https://www.confluent.io/blog/event-driven-multi-agent-systems/)**  
+  事件驱动的 Multi-Agent 设计模式。
+
+- **[RUCAIBox: awesome-agent-harness](https://github.com/RUCAIBox/awesome-agent-harness)**  
+  Agent Harness 相关论文和资源的 awesome list。
+
+### MCP（Model Context Protocol）
+
+- **[MCP 官方规范](https://modelcontextprotocol.io/specification/2025-03-26)**  
+  Anthropic 主导的 Model Context Protocol 完整技术规范。
+
+- **[Anthropic: Introducing the Model Context Protocol](https://www.anthropic.com/news/model-context-protocol)**  
+  MCP 的设计动机与愿景。
+
+- **[Anthropic: Writing Effective Tools for AI Agents](https://www.anthropic.com/engineering/writing-tools-for-agents)**  
+  如何设计好的工具 schema，让 Agent 能正确、高效地使用工具。
+
+- **[MCP Spec 2025-06-18 更新](https://forgecode.dev/blog/mcp-spec-updates/)**  
+  最新规范变更：安全增强、Structured Output、Elicitation 等。
+
+### 安全、护栏与评估
+
+- **[OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)**  
+  LLM 应用安全十大风险，Agent 场景尤其需要关注 prompt injection、insecure output handling、excessive agency。
+
+- **[JetBrains: LLM Evaluation and AI Observability for Agent Monitoring](https://blog.jetbrains.com/pycharm/2026/05/llm-evaluation-and-ai-observability-for-agent-monitoring/)**  
+  Agent 评估与可观测性实践指南。
+
+- **[AI Agent Guardrails: Production Enterprise Safety Guide](https://devops.gheware.com/blog/posts/ai-agent-guardrails-production-enterprise-2026.html)**  
+  企业级 Agent 护栏部署完整指南。
+
+### 速成与入门
+
+- [速成课：使用开源工具构建 AI 代理](https://github.com/patchy631/ai-engineering-hub/tree/main/agent-with-mcp-memory)：讲”什么是 AI Agent”、工具连接、MCP 替换、可观察性。
+- [roadmap.sh: AI Agents](https://roadmap.sh/ai-agents)：社区驱动的 AI Agent 学习路线图。
+- 书籍：《大模型应用开发 动手做AI Agent》——入门实操。
+
+### 扩展阅读
+
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)：解释长上下文处理的挑战，”为什么要把任务拆分”的理论依据。
+- [Google A2A: Agent-to-Agent Protocol](https://google.github.io/A2A/)：Agent 间通信的开放协议。
+- [HumanLayer](https://humanlayer.dev/)：”It's not a model problem. It's a configuration problem.” 人机协作层。
 ---
 
 ## 6️⃣框架

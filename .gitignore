@@ -1,6 +1,7 @@
-# 忽略.env .vscode
+# 忽略.env .vscode .idea
 .env
 .vscode
+.idea/
 
 # 忽略测试db
 .my_rag_db
