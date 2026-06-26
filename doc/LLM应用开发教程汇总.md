@@ -128,18 +128,103 @@
 
 ## 4️⃣RAG
 
+RAG（Retrieval-Augmented Generation）是 LLM 应用最重要的"事实落地"手段。从 Naive RAG 到 Agentic RAG，工程深度堪比 Agent 系列——分块、检索、重排、评估每一层都是独立学科。
+> 详细的 RAG 系列学习文章正在筹备中，建成后将放在 [doc/rag/](./rag/) 目录。
 
-LangChain团队的RAG系列视频：[RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x)  
+### 核心必读（按优先级排序）
 
-大佬“沧海九粟”的中文版：[从零开始学习 RAG](https://www.bilibili.com/video/BV1dm41127jc/)
+- **[Retrieval-Augmented Generation for Large Language Models: A Survey](https://arxiv.org/abs/2312.10997)**（推荐首读）
+  同济大学综述，提出 **Naive RAG → Advanced RAG → Modular RAG** 三代演进模型，是后续所有 RAG 论文的引用起点。
 
-### 深入学习  
+- **[Anthropic: Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval)**
+  Anthropic 提出的"上下文检索"技术：在 chunk 前预置 LLM 生成的上下文摘要，检索失败率下降 49%（叠加 rerank 后 67%）。生产级 RAG 必看。
 
-- GraphRAG  
-微软研究院的GraphRAG介绍：[《Welcome to GraphRAG》](https://microsoft.github.io/graphrag/)
+- **[LangChain: RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x)**
+  LangChain 团队的 14 集系列视频，从 indexing → retrieval → generation 每个环节拆解，工程师入门首选。
+  - 中文版：[大佬"沧海九粟"《从零开始学习 RAG》](https://www.bilibili.com/video/BV1dm41127jc/)
 
-- AgenticRAG
-[AgenticRAG](https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag)
+- **[NVIDIA: What Is Retrieval-Augmented Generation?](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)**
+  RAG 概念发明人之一（Patrick Lewis）所在团队的官方科普，配图清晰，适合给业务方讲解。
+
+- **[Microsoft: Azure AI Search RAG Pattern Guide](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide)**
+  企业级 RAG 方案设计与评估完整指南，涵盖文档预处理、分块、混合检索、评估闭环。
+
+### RAG 范式演进
+
+- **[Lewis et al.: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (2020)](https://arxiv.org/abs/2005.11401)**：RAG 概念原始论文（NeurIPS 2020），定义了 retriever + generator 端到端联合训练范式。
+- **[Modular RAG: Transforming RAG Systems into LEGO-like Frameworks](https://arxiv.org/abs/2407.21059)**：Modular RAG 系统性归纳——把 RAG 拆成 Indexing / Pre-Retrieval / Retrieval / Post-Retrieval / Generation / Orchestration 六大模块。
+- **[Awesome-LLM-RAG (jxzhangjhu)](https://github.com/jxzhangjhu/Awesome-LLM-RAG)**：RAG 相关论文、教程、博客的 awesome 清单（持续更新）。
+- **[awesome-rag (frutik)](https://github.com/frutik/Awesome-RAG)**：另一份高质量 RAG 资源汇总，按主题分类。
+
+### 文档处理与分块（Chunking）
+
+- **[Pinecone: Chunking Strategies for LLM Applications](https://www.pinecone.io/learn/chunking-strategies/)**：分块策略全景——fixed-size / recursive / semantic / document-specific，每种的取舍。
+- **[Unstructured](https://docs.unstructured.io/welcome)**：开源文档解析工具，原生支持 PDF/DOCX/PPT/HTML 等 20+ 格式，输出统一的 Element 结构。
+- **[Docling (IBM)](https://github.com/docling-project/docling)**：IBM 开源的文档解析引擎，强项是表格识别和 layout-aware 解析。
+- **[LlamaParse](https://docs.cloud.llamaindex.ai/llamaparse/getting_started)**：LlamaIndex 出品，专为复杂文档（含表格/公式）设计的解析服务，对 PDF 表格支持优秀。
+- **[Nougat (Meta)](https://github.com/facebookresearch/nougat)**：学术论文专用 OCR，能把公式还原为 LaTeX。
+- **[Late Chunking](https://weaviate.io/blog/late-chunking)**：Weaviate 提出的"先编码整文档再分块"技术，保留上下文信息，召回质量明显提升。
+
+### Embedding 与检索
+
+- **[MTEB Leaderboard](https://huggingface.co/spaces/mteb/leaderboard)**：Hugging Face 维护的多任务 Embedding 排行榜，选模型的事实标准。
+- **[BGE 系列 (BAAI)](https://github.com/FlagOpen/FlagEmbedding)**：智源开源的中英文双语 embedding，BGE-M3 同时支持 dense / sparse / multi-vector。
+- **[ColBERT v2: Effective and Efficient Retrieval via Lightweight Late Interaction](https://arxiv.org/abs/2112.01488)**：late interaction 范式，比 dense embedding 更细粒度。
+- **[Stanford ColPali: Efficient Document Retrieval with Vision Language Models](https://arxiv.org/abs/2407.01449)**：跳过 OCR，用 VLM 直接对文档图像做 late interaction 检索，多模态 RAG 新基线。
+- **[Cohere Rerank](https://cohere.com/rerank)**：商用 cross-encoder 重排服务，对召回结果二次排序提升精度。
+- **[Hybrid Search Explained (Pinecone)](https://www.pinecone.io/learn/hybrid-search-intro/)**：dense + sparse（BM25）混合检索原理与实现。
+- **[HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels](https://arxiv.org/abs/2212.10496)**：先让 LLM"假设"答案再用假设去检索的 query 改写技巧。
+
+### 向量数据库选型
+
+- **[Milvus](https://milvus.io/docs)**：分布式架构，亿级向量首选，2.5 版本支持稀疏向量、全文检索、混合搜索。
+- **[Qdrant](https://qdrant.tech/documentation/)**：Rust 编写，开发者体验优秀，filter + 向量混合查询性能强。
+- **[Weaviate](https://weaviate.io/developers/weaviate)**：内置混合检索 + 模块化向量化，BYOV（bring your own vectorizer）友好。
+- **[pgvector](https://github.com/pgvector/pgvector)**：PostgreSQL 扩展，适合"已经在用 Postgres"的团队，0.7+ 支持 halfvec 和 HNSW 性能跃升。
+- **[Chroma](https://docs.trychroma.com/)**：轻量本地优先，适合 prototype 和小规模生产。
+- **[LanceDB](https://lancedb.github.io/lancedb/)**：嵌入式、多模态、列式存储，适合"数据湖+向量"统一查询。
+- **[Vector Database Benchmark (VectorDBBench)](https://github.com/zilliztech/VectorDBBench)**：Zilliz 维护的开源向量库 benchmark，可复现选型对比。
+
+### 高级范式
+
+- **[Microsoft GraphRAG](https://microsoft.github.io/graphrag/)**：基于知识图谱 + 社区检测的 RAG 范式，擅长"全局问题"（如总结主题、关联实体）。
+  - 论文：[From Local to Global: A Graph RAG Approach to Query-Focused Summarization](https://arxiv.org/abs/2404.16130)
+- **[Neo4j GraphRAG Manifesto](https://neo4j.com/blog/graphrag-manifesto/)**：Neo4j 视角的 GraphRAG 实现路径与最佳实践。
+- **[Agentic RAG: A Survey on Agentic Retrieval-Augmented Generation](https://arxiv.org/abs/2501.09136)**：Agentic RAG 综述，把 Agent 决策能力引入 RAG 检索流程。
+  - 入门博客：[ByteByteGo: RAG vs Agentic RAG](https://blog.bytebytego.com/p/ep169-rag-vs-agentic-rag)
+- **[Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](https://arxiv.org/abs/2310.11511)**：让模型自己决定"何时检索"和"是否信任检索结果"。
+- **[Corrective RAG (CRAG)](https://arxiv.org/abs/2401.15884)**：检索结果质量评估 + 失败时回退到网络搜索的纠错范式。
+- **[RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](https://arxiv.org/abs/2401.18059)**：递归聚类生成层次化摘要树，多粒度检索利器。
+- **[HippoRAG: Neurobiologically Inspired Long-Term Memory](https://arxiv.org/abs/2405.14831)**：受海马体启发的图谱检索范式，多跳问题性能大幅提升。
+
+### 评估与可观测
+
+- **[RAGAS](https://docs.ragas.io/)**：开源 RAG 评估框架，提供 faithfulness / answer relevancy / context precision / context recall 等核心指标。
+- **[TruLens](https://www.trulens.org/)**：RAG 三角评估（Context Relevance / Groundedness / Answer Relevance）的开源实现。
+- **[ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems](https://arxiv.org/abs/2311.09476)**：自动化 RAG 评估框架，基于 LLM-as-judge 但有统计校准。
+- **[DeepEval](https://docs.confident-ai.com/)**：pytest 风格的 LLM/RAG 单元测试框架，CI 友好。
+- **[LangSmith](https://docs.smith.langchain.com/)**：LangChain 官方追踪与评估平台，RAG pipeline 调试首选。
+
+### 生产化：长上下文、缓存、新鲜度
+
+- **[Anthropic: Long Context vs RAG](https://www.anthropic.com/engineering/contextual-retrieval)**：长上下文模型时代 RAG 是否还需要？Anthropic 的答案是"互补"。
+- **[LlamaIndex: How to Build a Production-Ready RAG System](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/)**：LlamaIndex 官方生产级 RAG 优化清单。
+- **[Towards Long Context RAG (LlamaIndex)](https://www.llamaindex.ai/blog/towards-long-context-rag)**：长上下文条件下的 RAG 设计模式。
+- **[OpenAI: Prompt Caching](https://platform.openai.com/docs/guides/prompt-caching)** / **[Anthropic: Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)**：缓存检索到的上下文，降低成本和首字延迟。
+
+### 速成与入门
+
+- 视频：[LangChain RAG From Scratch](https://www.youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x) / 中文版 [《从零开始学习 RAG》](https://www.bilibili.com/video/BV1dm41127jc/)
+- 课程：[DeepLearning.AI: Building and Evaluating Advanced RAG](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/)（吴恩达 + LlamaIndex）
+- 课程：[DeepLearning.AI: Knowledge Graphs for RAG](https://www.deeplearning.ai/short-courses/knowledge-graphs-rag/)（吴恩达 + Neo4j）
+- 教程：[Pinecone Learning Center](https://www.pinecone.io/learn/)：从向量基础到 RAG 工程的系统教程。
+
+### 扩展阅读
+
+- [Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)：长上下文中的"中间塌陷"现象——重排和上下文压缩的理论依据。
+- [DRAGIN: Dynamic Retrieval Augmented Generation](https://arxiv.org/abs/2403.10081)：动态决定何时触发检索的范式。
+- [Active Retrieval Augmented Generation (FLARE)](https://arxiv.org/abs/2305.06983)：生成过程中主动触发检索的实现。
+- [RAG vs Fine-tuning: Pipelines, Tradeoffs, and a Case Study on Agriculture](https://arxiv.org/abs/2401.08406)：微软的 RAG vs Fine-tuning 实证研究。
 
 ---
 
